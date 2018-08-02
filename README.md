@@ -13,5 +13,5 @@ Example:
     providerName="System.Data.SqlClient"
     connectionString="Data Source=.\SQLEXPRESS;Initial Catalog=BusReservations;Integrated Security=True;MultipleActiveResultSets=True"/>  
   </connectionStrings>
-  //Data Source should be equal to your SQL Server name.
 ```
+**Data Source="" should be equal to your SQL Server name**
