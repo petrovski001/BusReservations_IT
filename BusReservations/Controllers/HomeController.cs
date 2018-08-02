@@ -12,6 +12,11 @@ namespace BusReservations.Controllers
         
         public ActionResult Index()
         {
+	    using(var db = new BusReservationsDB())
+            {
+                db.BusCompanies.Add(new BusCompany { Name = "ime" });
+                db.SaveChanges();
+            }
             return View();
         } 
 
