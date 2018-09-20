@@ -201,6 +201,10 @@
     <Compile Include="Migrations\201808021720468_InitialCreate.Designer.cs">
       <DependentUpon>201808021720468_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809181131217_Init.cs" />
+    <Compile Include="Migrations\201809181131217_Init.Designer.cs">
+      <DependentUpon>201809181131217_Init.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BusCompany.cs" />
@@ -234,7 +238,9 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -278,9 +284,11 @@
     <Content Include="Views\Destinations\Details.cshtml" />
     <Content Include="Views\Destinations\Edit.cshtml" />
     <Content Include="Views\Destinations\Index.cshtml" />
+    <Content Include="Views\Account\AddNewCompany.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\ApplicationUsers\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -298,6 +306,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201808021720468_InitialCreate.resx">
       <DependentUpon>201808021720468_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809181131217_Init.resx">
+      <DependentUpon>201809181131217_Init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

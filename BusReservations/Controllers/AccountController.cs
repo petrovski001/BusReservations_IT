@@ -51,6 +51,35 @@ namespace BusReservations.Controllers
                 _userManager = value;
             }
         }
+        private BusReservationsDB db = new BusReservationsDB();
+
+        [Authorize(Roles ="Admin")]
+        public ActionResult AddNewCompany()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize(Roles ="Admin")]
+        public ActionResult AddNewCompany([Bind(Include = "Id,Name")] BusCompany busCompany)
+        {
+            if (ModelState.IsValid)
+            {
+                if (db.BusCompanies.Any(o => o.Name == busCompany.Name))
+                {
+                    ViewBag.ErrorMessage = "Company exists!";
+                }
+                else
+                { 
+                    db.BusCompanies.Add(busCompany);
+                    db.SaveChanges();
+                    return RedirectToAction("Index", "BusCompanies");
+                }
+            }
+
+            return View(busCompany);
+        }
 
         //
         // GET: /Account/Login

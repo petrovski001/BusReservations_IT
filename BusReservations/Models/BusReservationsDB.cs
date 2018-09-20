@@ -12,5 +12,6 @@ namespace BusReservations.Models
 
         public DbSet<BusCompany> BusCompanies { get; set; }
         public DbSet<Destination> Destinations { get; set; }
+        //public DbSet<ApplicationUser> Users { get; set; }
     }
 }

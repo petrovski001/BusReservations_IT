@@ -14,8 +14,7 @@ namespace BusReservations.Controllers
         {
 	    using(var db = new BusReservationsDB())
             {
-                db.BusCompanies.Add(new BusCompany { Name = "ime" });
-                db.SaveChanges();
+                
             }
             return View();
         } 
